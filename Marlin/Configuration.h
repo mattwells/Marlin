@@ -484,9 +484,9 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
   // E3D Hemera
-  #define DEFAULT_Kp 26.81
-  #define DEFAULT_Ki 2.21
-  #define DEFAULT_Kd 81.27
+  #define DEFAULT_Kp 30.14
+  #define DEFAULT_Ki 2.56
+  #define DEFAULT_Kd 88.65
 
   // Ultimaker
   //#define DEFAULT_Kp 21.73
@@ -522,7 +522,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-//#define PIDTEMPBED
+#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -538,11 +538,15 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
+  #define DEFAULT_bedKp 127.46
+  #define DEFAULT_bedKi 25.47
+  #define DEFAULT_bedKd 425.28
+
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  // #define DEFAULT_bedKp 10.00
+  // #define DEFAULT_bedKi .023
+  // #define DEFAULT_bedKd 305.4
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -961,7 +965,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { -41, 0, -1.11 }
+#define NOZZLE_TO_PROBE_OFFSET { -41, 0, -0.9 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
